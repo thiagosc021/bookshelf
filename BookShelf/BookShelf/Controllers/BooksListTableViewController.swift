@@ -14,7 +14,6 @@ class BooksListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "My Bookshelf"
-      
     }
 
     // MARK: - Table view data source
@@ -33,7 +32,7 @@ class BooksListTableViewController: UITableViewController {
         
         content.image =  coverImage.scalePreservingAspectRatio(targetSize: BooksController.thumbnailSize)
         content.text = "\(book.title), by \(book.author)"
-        
+        content.textProperties.color = .white
         cell.contentConfiguration = content
         
         return cell

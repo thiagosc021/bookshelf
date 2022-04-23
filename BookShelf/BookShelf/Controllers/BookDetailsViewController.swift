@@ -31,7 +31,7 @@ class BookDetailsViewController: UIViewController {
         authorLabel.text = model.author
         let coverImage = UIImage(named: model.cover)
         coverImageView.image = coverImage?.scalePreservingAspectRatio(targetSize: BooksController.fullImageSize)
-        releaseYearLabel.text = model.releaseDate.formatted()
+        releaseYearLabel.text = model.releaseDate.getYear()
         descriptionTextView.text = model.description
     }
 

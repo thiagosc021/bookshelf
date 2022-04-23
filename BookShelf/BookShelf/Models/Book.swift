@@ -34,3 +34,11 @@ extension String {
     }
 }
 
+extension Date {
+    func getYear(withFormat format: String = "yyyy") -> String {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = format
+        return dateFormater.string(from: self)
+    }
+}
+
